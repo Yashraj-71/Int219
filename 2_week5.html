@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #aryabhatt {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #tableButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #tableOrFactorial {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="aryabhatt" src="aryabhatt.jpeg" alt="Aryabhatt">
+    <button id="tableButton">Table-Factorial</button>
+    <div id="tableOrFactorial"></div>
+    <script>
+        const image = document.getElementById("aryabhatt");
+        const button = document.getElementById("tableButton");
+        const tableOrFactorial = document.getElementById("tableOrFactorial");
+
+        let isTableDisplayed = false; 
+
+        function calculateFactorial(n) {
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+
+        button.addEventListener("click", function () {
+            if (isTableDisplayed) {
+                tableOrFactorial.innerHTML = "<table border='1'><tr><td>2 x 1 = 2</td></tr><tr><td>2 x 2 = 4</td></tr><tr><td>2 x 3 = 6</td></tr><tr><td>2 x 4 = 8</td></tr><tr><td>2 x 5 = 10</td></tr><tr><td>2 x 6 = 12</td></tr><tr><td>2 x 7 = 14</td></tr><tr><td>2 x 8 = 16</td></tr><tr><td>2 x 9 = 18</td></tr><tr><td>2 x 10 = 20</td></tr></table>";
+                image.style.display = "none"; 
+                isTableDisplayed = false;
+            } else {
+                const num = parseInt(prompt("Enter a number to calculate its factorial:"));
+                const factorial = calculateFactorial(num);
+                tableOrFactorial.textContent = `Factorial of ${num} is: ${factorial}`;
+                image.style.display = "none"; 
+                isTableDisplayed = true;
+            }
+        });
+    </script>
+</body>
+
+</html>

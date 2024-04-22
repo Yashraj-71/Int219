@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append &prepend</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+        <p id="p1">Hello..</p>
+        <h1 id="h1">Hii.....</h1><br>
+        <button type="submit" id="btn1" >prepend</button>
+        <button type="submit" id="btn1" >append</button>
+
+        <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+            $("#p1").before("Good morning");
+            });
+            $("#btn2").click(function(){
+            $("#h1").after("Study Well");
+            
+            });
+        });
+    </script>
+</body>
+</html>

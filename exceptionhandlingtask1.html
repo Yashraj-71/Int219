@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter between 0-100" id="text1">
+    <button onclick="demo()">Submit</button>
+    <p id="p1"></p>
+    <script>
+        function demo(){
+            var a = document.getElementById("p1");
+            var b = document.getElementById("text1").value;
+            a.innerHTML = "";
+            try {
+                if (b === "") throw "Please enter a number";
+                if (isNaN(b)) throw "Not a number";
+                var number = parseInt(b);
+                if (number < 0) throw "Number should be positive";
+                if (number > 100) throw "Number is too large";
+                if (number % 100 === 0) throw "Number cannot be divisible by 0";
+            }
+            catch(err) {
+                a.innerHTML = err;
+            }
+        }
+    </script>
+</body>
+</html>

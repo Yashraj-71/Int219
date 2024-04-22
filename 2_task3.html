@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryabhatta and Newton</title>
+    <style>
+        .abc{
+            display: none;
+            margin-top: 20px;
+            position: absolute;
+            z-index: 1;
+        }
+        #aryabhatta {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="aryabhatta" src="aryabhatt.jpeg">
+        <div id="aryabhatta-info" class="abc">
+            <h2>Aryabhatta</h2>
+            <p>Aryabhata (born 476, possibly Ashmaka or Kusumapura, India) was an astronomer and the earliest Indian mathematician
+                whose work and history are available to modern scholars. He is also known as Aryabhata I or Aryabhata the Elder to
+                distinguish him from a 10th-century Indian mathematician of the same name. He flourished in Kusumapura—near Patalipurta
+                (Patna), then the capital of the Gupta dynasty—where he composed at least two works, Aryabhatiya (c. 499) and the now 
+                lost Aryabhatasiddhanta. Aryabhatasiddhanta circulated mainly in the northwest of India and, through the Sāsānian dynasty
+                (224–651) of Iran, had a profound influence on the development of Islamic astronomy. Its contents are preserved to some 
+                extent in the works of Varahamihira (flourished c. 550), Bhaskara I (flourished c. 629), Brahmagupta (598–c. 665), and 
+                others. It is one of the earliest astronomical works to assign the start of each day to midnight.</p>
+        </div>
+    </div>
+    <script>
+        const aryabhattaImg = document.getElementById('aryabhatta');
+        const aryabhattaInfo = document.getElementById('aryabhatta-info');
+
+
+        aryabhattaImg.addEventListener('click', () => {
+            aryabhattaInfo.style.display = 'block';
+        });
+        aryabhattaInfo.addEventListener('click', () => {
+            aryabhattaInfo.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

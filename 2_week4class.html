@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mickey Mouse Face</title>
+    <style>
+        .circle {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: transparent; 
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .ear {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .eye {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .nose {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+        <div class="ear" style="top: 50px; left: 50px;"></div>
+        <div class="ear-left" style="top: 50px; right: 50px;"></div>
+        <div class="eye-left" style="top: 100px; left: 75px;"></div>
+        <div class="eye" style="top: 100px; right: 75px;"></div>
+        <div class="nose" style="top: 150px; left: 100px;"></div>
+    </div>
+</body>
+</html>

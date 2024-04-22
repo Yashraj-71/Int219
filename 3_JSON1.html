@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON stringify</title>
+    it is used to convert objects into string
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+    var stud,a="",i;
+    stud={
+        "name":"Yashraj",
+        "age":20,
+        "courses":"HTML"
+    }
+    var sh=JSON.stringify(stud);
+    document.getElementById("p").innerHTML=sh;
+</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON parse</title>
+    <!-- it is used to convert string into objects -->
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+    var stud,a="",i;
+    stud=`{
+        "name":"Yashraj",
+        "age":20,
+        "courses":"HTML"
+    }`
+    var s=JSON.parse(stud)
+    document.getElementById("p").innerHTML=s.name;
+</script>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale.0">
+    <title>jquery </title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <p>Hello...</p>
+    <button id="1">Hide</button>
+    <button id="2">Show</button>
+    <button id="3">fade to</button>
+    <button id="4">fade in</button>
+    <button id="5">slide down</button>
+    <button id="6">slide toggle</button>
+    <button id="7">stop</button><br><br>
+    <div id="8" style="width:20px;height:30px;display:none;background-color:red;"></div><br>
+    <div id="9" style="width:20px;height:30px;display:none;background-color:green;"></div><br>
+    <div id="10" style="width:20px;height:30px;display:none;background-color:blue;"></div>
+    <script>
+        $(document).ready(function () {
+            $("#1").click(function () {
+                $("p").hide();
+            });
+            $("#2").click(function () {
+                $("p").show();
+            });
+            $("#5").click(function () {
+                $("#8").slideDown();
+                $("#9").slideDown("slow");
+                $("#10").slideDown(4000);
+            });
+            $("#6").click(function () {
+                $("#8").slideToggle();
+                $("#9").slideToggle("slow");
+                $("#10").slideToggle(4000);
+            });
+            $("#7").click(function () {
+                $("#8").stop();
+                $("#9").stop("slow");
+                $("#10").stop(4000);
+            });
+        });
+    </script>
+</body>
+
+</html>

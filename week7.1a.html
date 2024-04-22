@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <p id="p1"></p>
+
+    <script>
+        const a='["OS","HTML","NODEJS","JAVA","PEA","DAA","AI"]';
+        const b=JSON.parse(a);
+        document.getElementById("p1").innerHTML=b[5];
+        if(b[0]=="OS"){
+            b[0]="DBMS";
+        }
+        document.getElementById("p").innerHTML=b[0];
+
+    </script>
+</body>
+</html>

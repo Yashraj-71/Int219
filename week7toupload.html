@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+
+    <script>
+        var a={
+            "name":"Yashraj",
+            "rollno":40,
+            "attendence":99,
+            "subjects":[
+            {"Subjectname":"HTML","courseteachername":["palavi","soni"]},
+            {"Subjectname":"OS","courseteachername":["soni","singh"]},
+            {"Subjectname":"PEA","courseteachername":["abhishek","kumar"]},
+            {"Subjectname":"DAA","courseteachername":["anshu","kumar"]},
+            ]
+        }
+
+        var s="";
+        a.subjects.forEach(function(subject){
+            var sn=subject.Subjectname;
+            var tfn=subject.courseteachername[0];
+            var tln=subject.courseteachername[1];
+            s+="<h1>"+sn+"<br>"+tfn+"<br>"+tln+"</h1>";
+
+        });
+    document.getElementById("p").innerHTML=s;
+    </script>
+</body>
+</html>

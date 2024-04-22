@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        input {
+            width: 200px;
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>KeyboardEvents Colour change</h1>
+        <input type="text" placeholder="OnkeyDown" id="keyDown" class="one" onkeydown="changeColor('keyDown', this.value)"><br><br>
+        <input type="text" placeholder="OnkeyUp" id="keyUp" class="one" onkeyup="changeColor('keyUp', this.value)"><br><br>
+        <input type="text" placeholder="OnkeyPress" id="keyPress" class="one" onkeypress="changeColor('keyPress', this.value)"><br>
+
+        <script>
+            function changeColor(elementId, color) {
+                var element = document.getElementById(elementId);
+                element.style.backgroundColor = color;
+            }
+        </script>
+    </form>
+</body>
+</html>

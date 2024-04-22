@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #box{
+            height: 200px;
+            width: 300px;
+            border: 2px solid  black;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        Hello I am inside class K22PA.....Students needs to enhance their coding skills 
+        but practising more and more on daily basis,but they are not much involoved in
+        the classroom activities thaat they need to be improved for getting better placements.
+        Hello I am inside class K22PA.....Students needs to enhance their coding skills 
+        but practising more and more on daily basis,but they are not much involoved in
+        the classroom activities thaat they need to be improved for getting better placements.
+        <input type="text" name="">
+
+    </div>
+        <script>
+            $(document).ready(function(){
+                $("#box").click(function(){
+                $("body").css( "background", "orange");
+                });
+                $("#box").keypress(function(){
+                    $("body").css( "background", "teal");
+                });
+                $("#box").keydown(function(){
+                    $("body").css( "background", "lightgreen");
+                });
+                $("#box").keyup(function(){
+                    $("body").css( "background", "skyblue");
+                });
+            });
+        </script>
+</body>
+</html>

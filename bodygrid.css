@@ -1,0 +1,9 @@
+.container{
+    border: 8px ridge lightgreen;
+}
+.row{
+    border: 5px solid lightblue;
+}
+.col1 .col2 .col3{
+    border: 5px solid lightpink;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <th id="a" colspan="3">Datesheet</th>
+        </tr>
+        <tr>
+            <th>Subjects</th>
+            <th>Timings</th>
+            <th>Room No.</th>
+        </tr>
+        <tr>
+            <td>OS</td>
+            <td>9:30-10:30</td>
+            <td>38-916</td>
+        </tr>
+        <tr>
+            <td>Gen AI</td>
+            <td >10:30-11:30</td>
+            <td>38-916</td>
+        </tr>
+        <tr>
+            <td>DAA</td>
+            <td id="daa">11:30-12:30</td>
+            <td>38-916</td>
+        </tr>
+    </table>
+    <script>
+        $(document).ready(function(){
+            $("#daa").css("backgroundColor","orange");
+            $("#a").css("backgroundColor","yellow");
+            $("#myTable").css("border", "2px solid black");
+            $("tr, th, td").css("border", "2px solid black");
+            $("#myTable").css("margin", "0 auto");
+        });
+    </script>
+</body>
+</html>

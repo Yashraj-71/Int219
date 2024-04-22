@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>The setTimeout()</h2>
+<button onclick="myStopFunction()">Stop!</button>
+<h2 id="demo"></h2>
+<script>
+const myTimeout = setTimeout(myGreeting, 4000);
+
+function myGreeting() {
+document.getElementById("demo").innerHTML = "Good Morning ";
+setTimeout(displayName, 4000);
+}
+
+function displayName() {
+alert("Yashraj Chandel");
+}
+
+function myStopFunction() {
+clearTimeout(myTimeout);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{
+            background-image: url('./img.jpeg');
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            height: 50vh; 
+        }
+    </style>
+    
+</head>
+<body >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-primary">Task Management</h1>
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="task">Add new Task</label>
+                        <input type="text" class="form-control" id="task">
+                    </div>
+                    <div class="col">
+                        <label for="priority">Select Priority:</label>
+                        <select class="form-control" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" id="addTaskBtn">Add Task</button>
+                    </div>
+                </div>
+                <div id="taskStatus">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("addTaskBtn").addEventListener("click", function() {
+                var taskInput = document.getElementById("task").value;
+                var priorityInput = document.getElementById("priority").value;
+                var taskStatus = document.getElementById("taskStatus");
+                var taskList = document.getElementById("taskList");
+
+                // Creating table row for the task
+                var row = document.createElement("tr");
+
+                // Task description cell
+                var taskCell = document.createElement("td");
+                taskCell.textContent = taskInput;
+                row.appendChild(taskCell);
+
+                // Priority cell
+                var priorityCell = document.createElement("td");
+                priorityCell.textContent = priorityInput;
+                row.appendChild(priorityCell);
+
+                // Status cell
+                var statusCell = document.createElement("td");
+                statusCell.textContent = "Pending"; // Default status
+                row.appendChild(statusCell);
+
+                // Actions cell
+                var actionsCell = document.createElement("td");
+                var completeButton = document.createElement("button");
+                completeButton.textContent = "Complete";
+                completeButton.classList.add("btn", "btn-success", "mr-2");
+                completeButton.addEventListener("click", function() {
+                    // Toggle completed status
+                    if (row.classList.contains("completed")) {
+                        row.classList.remove("completed");
+                        statusCell.textContent = "Pending";
+                    } else {
+                        row.classList.add("completed");
+                        statusCell.textContent = "Completed";
+                    }
+                });
+                actionsCell.appendChild(completeButton);
+
+                var deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.classList.add("btn", "btn-danger");
+                deleteButton.addEventListener("click", function() {
+                    row.remove();
+                });
+                actionsCell.appendChild(deleteButton);
+
+                row.appendChild(actionsCell);
+
+                taskList.appendChild(row);
+
+                document.getElementById("task").value = "";
+                document.getElementById("priority").value = "low";
+            });
+        });
+    </script>
+</body>
+</html>

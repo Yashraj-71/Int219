@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Basic Calculator</h2>
+
+    <button onclick="addition()">Addition</button>
+    <button onclick="subtraction()">Subtraction</button>
+    <button onclick="multiplication()">Multiplication</button>
+    <button onclick="division()">Division</button>
+    <p id="result"></p>
+
+    <script>
+        function addition() {
+            var num1 = prompt("Enter first number:");
+            var num2 = prompt("Enter second number:");
+            var sum = Number(num1) + Number(num2);
+            document.getElementById("result").innerHTML = "Result: " + sum;
+        }
+
+        function subtraction() {
+            var num1 = prompt("Enter first number:");
+            var num2 = prompt("Enter second number:");
+            var diff = Number(num1) - Number(num2);
+            document.getElementById("result").innerHTML = "Result: " + diff;
+        }
+
+        function multiplication() {
+            var num1 = prompt("Enter first number:");
+            var num2 = prompt("Enter second number:");
+            var product = Number(num1) * Number(num2);
+            document.getElementById("result").innerHTML = "Result: " + product;
+        }
+
+        function division() {
+            var num1 = prompt("Enter first number:");
+            var num2 = prompt("Enter second number:");
+            var quotient = Number(num1) / Number(num2);
+            document.getElementById("result").innerHTML = "Result: " + quotient;
+        }
+    </script>
+
+</body>
+</html>

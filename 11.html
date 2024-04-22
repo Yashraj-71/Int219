@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Windows open and close events</h2>
+    <button id="btn1" onclick="opening()">Open Window</button>
+    <button id="btn2" onclick="closing()">Close Window</button>
+
+    <script>
+        var a;
+        function opening()
+        {
+            var width = 600;
+            var height = 400;
+            var left = (window.screen.width / 2) - (width / 2);
+            var top = (window.screen.height / 2) - (height / 2);
+            a = window.open('https://www.google.com/','','width='+width+',height='+height+',left='+left+',top='+top);
+        }
+        function closing()
+        {
+            a.close();
+        }
+    </script>
+</body>
+</html>
+
+another method 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #newWindow {
+            position: absolute;
+            top: calc(50% - 200px);
+            left: calc(50% - 300px);
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Windows open and close events</h2>
+    <button id="btn1" onclick="opening()">Open Window</button>
+    <button id="btn2" onclick="closing()">Close Window</button>
+
+    <script>
+        function opening()
+        {
+            var a = window.open('https://www.google.com/','newWindow','');
+            a.document.write('<link rel="stylesheet" type="text/css" href="styles.css">');
+        }
+        function closing()
+        {
+            a.close();
+        }
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr td {
+            border-radius: 5px;
+            border: 2px solid blue;
+            align-items: center;
+        }
+        .container{
+            background-color: violet;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>VIKASH KUMAR PATHAK</h2>
+        <h2>12211944</h2>
+    </div>
+    <fieldset>
+        <legend>User information</legend>
+        <form action="#" autocomplete="off" onsubmit="return check()">
+            <table style="width:100%" cellpadding="11" cellspacing="10" align="center">
+                <tr>
+                    <td><input type="text" id="name" placeholder="Enter Your name"> <span id="name1" style="color: rgb(241, 19, 19);"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="password" placeholder="Enter Your password"> <span id="pass1" style="color: red;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="conpass" placeholder="Enter Your Confirm password"> <span
+                            id="conpass1" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="tel" id="mobile" placeholder="Enter Your mobile"> <span id="mobile1" style="color: red;"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="email" id="email" placeholder="Enter Your Email"> <span id="email1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="button" placeholder="Submit"> <span id="button1"></span></td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function check() {
+
+                var a=document.getElementById('name').value;
+                var b=document.getElementById('password').value;
+                var c=document.getElementById('conpass').value;
+                var d=document.getElementById('mobile').value;
+                if(a==""){
+                    document.getElementById('name1').innerHTML="*Name can't be blank";
+                }
+                else if(!(a.length>2 && a.length<10)){
+                    document.getElementById('name1').innerHTML="*It should be more than 1 character and less than 10 character";
+                }
+                if(b=="") {
+                    document.getElementById('pass1').innerHTML="*Password is required";
+                }
+                else if(b.length<8) {
+                    document.getElementById('pass1').innerHTML="*Password at least be 8 character";
+                }
+                if(c==""){
+                    document.getElementById('conpass1').innerHTML="*Enter Confirm Password";
+                }
+                else if(!(c.length>2 && c.length<10)){
+                    document.getElementById('conpass1').innerHTML="*Confirm password should be more than 1 character and less than 10 character";
+                }
+                if(b!=c){
+                    document.getElementById('conpass1').innerHTML="*Password are not same";
+                }
+                if(d==""){
+                    document.getElementById('mobile1').innerHTML="*Please Fill Mobile Number";
+                }
+                if(isNaN(d)){
+                    document.getElementById('mobile1').innerHTML="*Enter Only Numeric Value";
+                }
+                if(d.length<10){
+                    document.getElementById('mobile1').innerHTML="*Mobile Number must be 10 Digit";
+                }
+                if(d.length>10){
+                    document.getElementById('mobile1').innerHTML="*Mobile Number must be 10 Digit";
+                }
+
+            }
+        </script>
+    </fieldset>
+
+
+</body>
+
+</html>

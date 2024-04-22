@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="one">
+        <input type="password" id="two">
+        <select name="subjects" id="three">
+            <option value="OS">OS</option>
+            <option value="DSA">DSA</option>
+            <option value="HTML">HTML</option>
+        </select><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        $(document).ready(function(){
+            $("#one,#two").focus(function(){
+                $("#one,#two").css("backgroundColor","lightgreen");
+            });
+            $("#one,#two").blur(function(){
+                $("#one,#two").css("backgroundColor","");
+            });
+            $("#one").select(function(){
+                $("#one").css("backgroundColor","lightblue");
+            });
+            $("#three").change(function(){
+                $("#three").css("backgroundColor","red");
+            });
+            //$("#form").submit(function(event){
+            //    console.log("Yashraj...")
+            //});
+            $("#form").submit(function(event){
+                for(let i = 1; i <= 5; i++){
+                    let counter=1;
+                    let line=" ";
+                    for(let j=1;j<=i;j++){
+                        line+=counter+" ";
+                        counter++;
+                    }
+                    console.log(line);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

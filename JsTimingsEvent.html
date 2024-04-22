@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #currentTime {
+            font-size: 24px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <p id="currentTime"></p>
+
+    <script>
+        let timerInterval;
+        document.getElementById("startButton").addEventListener("click", () => {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(updateTime, 1000);
+        });
+        document.getElementById("stopButton").addEventListener("click", () => {
+            clearInterval(timerInterval);
+        });
+        function updateTime() {
+            const currentTime = new Date();
+            const formattedTime = currentTime.toLocaleTimeString();
+            document.getElementById("currentTime").textContent = `Current time: ${formattedTime}`;
+        }
+    </script>
+</body>
+</html>

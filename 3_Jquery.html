@@ -1,0 +1,107 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>Hello I am inside class K22PA.....Students needs to enhance their coding skills 
+        but practising more and more on daily basis,but they are not much involoved in
+        the classroom activities thaat they need to be improved for getting better placements.</p>
+        <ul>
+            <li id="qq">Red</li>
+            <li class="pp">Blue</li>
+            <li>Green</li>
+            
+        </ul>
+        <script>
+            $(document).ready(function(){
+                $("#qq").css("backgroundColor","skyblue");
+                $("p").css("backgroundColor","lightgreen");
+                $(".pp").css("backgroundColor","lightpink");
+
+            });
+        </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selectors</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        /* Define some custom CSS */
+        .custom-border {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p>Hello I am inside class K22PA.....Students need to enhance their coding skills but practicing more and more on a daily basis, but they are not much involved in the classroom activities that they need to be improved for getting better placements.</p>
+    <ul>
+        <li id="qq">Red</li>
+        <li class="pp">Blue</li>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li class="pp">Purple</li>
+        <li>Orange</li>
+        <li>Indigo</li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            // 1. Select by tag name
+            $("p").css("backgroundColor", "lightgreen");
+
+            // 2. Select by id
+            $("#qq").css("backgroundColor", "skyblue");
+
+            // 3. Select by class
+            $(".pp").css("backgroundColor", "lightpink");
+
+            // 4. Select by attribute [id]
+            $("[id]").css("color", "blue");
+
+            // 5. Select by attribute [class]
+            $("[class]").css("color", "red");
+
+            // 6. Select by attribute [attribute=value]
+            $("[id=qq]").css("border", "1px solid black");
+
+            // 7. Select the first li element
+            $("li:first").css("border", "1px dashed green");
+
+            // 8. Select the last li element
+            $("li:last").css("border", "1px dashed purple");
+
+            // 9. Select even-numbered li elements
+            $("li:even").css("border", "1px dotted orange");
+
+            // 10. Select odd-numbered li elements
+            $("li:odd").css("border", "1px dotted pink");
+
+            // 11. Select elements with a specific index
+            $("li:eq(2)").css("border", "1px solid cyan");
+
+            // 12. Select elements containing specific text
+            $("li:contains('Blue')").css("border", "1px solid blue");
+
+            // 13. Select elements with a specific parent
+            $("ul li").css("color", "gray");
+
+            // 14. Select elements with specific siblings
+            $("li").next().css("color", "brown");
+
+            // 15. Select elements that are not of a certain type
+            $("li").not(".pp").css("color", "purple");
+        });
+    </script>
+</body>
+</html>

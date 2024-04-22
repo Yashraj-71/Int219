@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: black;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>KeyboardEvents</h1>
+    <input type="text" placeholder="OnkeyDown" class="one" onkeydown="alert(this.value)"><br><br>
+    <input type="text" placeholder="OnkeyUp" class="one"onkeyup="alert(this.value)"><br><br>
+    <input type="text" placeholder="OnkeyPress" class="one" onkeypress="alert(this.value)"><br>
+    <h1>Mouse Events</h1>
+    <img src="1N3A1058.JPG" alt="" onclick="events1()" >
+    <img src="1N3A1058.JPG" alt="" ondblclick="events11()" >
+    <img src="1N3A1058.JPG" alt="" oncontextmenu="events111()" >
+    <img src="einstien.jpeg" alt="" onmouseout="events2()" >
+    <img src="einstien.jpeg" alt="" onmouseup="events3()" >
+    <img src="einstien.jpeg" alt="" onmousedown="events4()" >
+
+    <script>
+    function events1(){
+        window.location.href="/task1c.html";
+    }
+    function events11(){
+        window.location.href="/task1c.html";
+    }
+    function events111(){
+        window.location.href="/task1c.html";
+    }
+    function events2(){
+        document.write("Force = mA");
+        console.log("Table of 2:");
+        for (let i = 1; i <= 10; i++) {
+        console.log(`2 x ${i} = ${2 * i}`);
+    }
+
+    }
+    function events3(){
+        document.write("Force = mA");
+        console.log("Table of 2:");
+        for (let i = 1; i <= 10; i++) {
+        console.log(`2 x ${i} = ${2 * i}`);
+    }
+
+    }
+    function events4(){
+        document.write("Force = mA");
+        console.log("Table of 2:");
+        for (let i = 1; i <= 10; i++) {
+        console.log(`2 x ${i} = ${2 * i}`);
+    }
+
+    }
+</script>
+</body>
+</html>
